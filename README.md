@@ -11,4 +11,5 @@ https://docs.google.com/document/d/18-QpPhm2HUK8GArR2zYokB5q39BSgng7XyGHFxWjE4E/
 2. Tóm tắt khóa học Software Testing Fundamentals
 (todo...)
 
-
+3. Slides
+  - [Giới thiệu](https://www.dropbox.com/s/xa8lqkztn42885d/00-Course%20Info.pptx?dl=0)
