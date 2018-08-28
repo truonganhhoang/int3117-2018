@@ -1,5 +1,4 @@
-## INT3117-2018 
-## Kiểm thử và đảm bảo chất lượng phần mềm 2018-2019
+## INT3117-2018: Kiểm thử và đảm bảo chất lượng phần mềm 2018-2019
 
 ### Quản lý lớp học/nhóm: [GSheet](https://docs.google.com/spreadsheets/d/1DoR8nWm3PGEO9d54U1od9wTBtDthCuYSAmD5Bqvvhkw/edit#gid=1574496422)
 
