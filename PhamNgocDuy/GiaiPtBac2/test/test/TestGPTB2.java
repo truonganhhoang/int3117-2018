@@ -10,8 +10,9 @@ import giaiptbac2.PhuongTrinhBac2;
 import junit.framework.TestCase;
 
 /**
+ * Lớp này dùng để kiểm thử lớp PhuongTrinhBac2
  *
- * @author ADMIN
+ * @author github.com/phamngocduy98
  */
 public class TestGPTB2 extends TestCase {
 
