@@ -57,12 +57,10 @@ public class PhuongTrinhBac2 {
      * Hàm get số nghiệm của phương trình
      */
     public int getSoNghiem() {
-        if (this.isSolved) {
-            return this.soNghiem;
-        } else {
+        if (!this.isSolved) {
             this.solve();
-            return this.soNghiem;
         }
+        return this.soNghiem;
     }
 
     /**
