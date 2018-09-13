@@ -16,8 +16,12 @@ import junit.framework.TestCase;
  */
 public class TestGPTB2 extends TestCase {
 
+    // sai số cho phép của nghiệm
     private float denta = 0.0000001f;
 
+    /**
+     * constructor
+     */
     public TestGPTB2(String name) {
         super(name);
     }

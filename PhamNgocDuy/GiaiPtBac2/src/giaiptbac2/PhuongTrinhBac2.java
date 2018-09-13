@@ -20,7 +20,13 @@ public class PhuongTrinhBac2 {
     // phương trình đã giải chưa?
     private boolean isSolved = false;
 
-    // constructor
+    /**
+     * constructor
+     *
+     * @param a hệ số của x^2
+     * @param b hệ số của x
+     * @param c hệ số tự do
+     */
     public PhuongTrinhBac2(float a, float b, float c) {
         this.a = a;
         this.b = b;
@@ -31,7 +37,7 @@ public class PhuongTrinhBac2 {
     }
 
     /**
-     * hàm thực hiện giải phương trình bậc 2
+     * Hàm thực hiện giải phương trình bậc 2
      */
     public void solve() {
         this.isSolved = true;
@@ -55,6 +61,9 @@ public class PhuongTrinhBac2 {
 
     /**
      * Hàm get số nghiệm của phương trình
+     *
+     * @return số nghiệm của phương trình ( = 0 nếu vô nghiệm hoặc là phương
+     * trình bậc nhất vô số nghiệm)
      */
     public int getSoNghiem() {
         if (!this.isSolved) {
@@ -65,6 +74,8 @@ public class PhuongTrinhBac2 {
 
     /**
      * Hàm get các nghiệm của phương trình
+     *
+     * @return mảng float chứa các nghiệm (nếu có) của phương trình
      */
     public float[] getNghiem() {
         if (!this.isSolved) {
@@ -73,6 +84,11 @@ public class PhuongTrinhBac2 {
         return this.nghiem;
     }
 
+    /**
+     * Hàm toString()
+     *
+     * @return chuỗi string biểu thị cho đối tượng
+     */
     @Override
     public String toString() {
         String nghiemToString = "[";
