@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class TestMath {
+public class TestAddNumber {
     
     AddNumber math = new AddNumber();
    @Test
