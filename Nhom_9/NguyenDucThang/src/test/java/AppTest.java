@@ -1,5 +1,7 @@
 /*
  * This class is a junit test class for LeapYear
+ *
+ * @author Nguyen Duc Thang
  */
 import org.junit.Test;
 import static org.junit.Assert.*;

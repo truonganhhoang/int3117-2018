@@ -1,5 +1,7 @@
 /*
  * This is main class
+ *
+ * @author Nguyen Duc Thang
  */
 public class LeapYear {
 
