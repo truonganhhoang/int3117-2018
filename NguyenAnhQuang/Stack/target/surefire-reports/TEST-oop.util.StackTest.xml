@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="oop.util.StackTest" time="0.044" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="oop.util.StackTest" time="0.066" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Administrator\Desktop\oop\HW04\Stack"/>
+    <property name="user.dir" value="C:\Users\Administrator\Desktop\NguyenAnhQuang\Stack"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="oop.util.StackTest" name="testPushNTop" time="0.003"/>
+  <testcase classname="oop.util.StackTest" name="testPushNTop" time="0.004"/>
   <testcase classname="oop.util.StackTest" name="testPop" time="0"/>
   <testcase classname="oop.util.StackTest" name="testPush" time="0.001"/>
   <testcase classname="oop.util.StackTest" name="testIsEmpty" time="0"/>
