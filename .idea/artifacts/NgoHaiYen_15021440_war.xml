@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="NgoHaiYen_15021440:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="fibonacci-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="NgoHaiYen_15021440:war exploded" />
+    </root>
+  </artifact>
+</component>
