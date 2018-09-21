@@ -6,6 +6,9 @@ package algorithm;
  */
 public class Algorithm {
     
+    /**
+     * This function sorts an integer array in non-decreasing order
+     */
     public static int[] insertionSort(int[] array) {
         if(array == null) {
             return null;
@@ -23,6 +26,9 @@ public class Algorithm {
         return result;
     }
     
+    /**
+     * Main function
+     */
     public static void main(String[] args) {
         
     }
