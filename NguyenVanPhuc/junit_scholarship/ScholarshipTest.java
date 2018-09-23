@@ -3,6 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * JUnit test for Scholarship.java
  *
  * @author phuc
  */
@@ -12,7 +13,8 @@ public class ScholarshipTest {
     }
 
     /**
-     * Test of scholarship method, of class Scholarship.
+     * Test of scholarship method, of class Scholarship. Test input avaragePoint
+     * error
      */
     @Test
     public void testScholarship0() {
@@ -23,7 +25,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test input trainingPoint error
+     */
     @Test
     public void testScholarship1() {
         System.out.println("scholarship");
@@ -33,7 +38,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test input avaragePoint & trainingPoint error
+     */
     @Test
     public void testScholarship2() {
         System.out.println("scholarship");
@@ -43,7 +51,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test input avaragePoint = 0.0 & trainingPoint = 0
+     */
     @Test
     public void testScholarship3() {
         System.out.println("scholarship");
@@ -53,7 +64,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test student don't receive scholarship because of avaragePoint
+     */
     @Test
     public void testScholarship4() {
         System.out.println("scholarship");
@@ -63,7 +77,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test student don't receive scholarship because of trainingPoint
+     */
     @Test
     public void testScholarship5() {
         System.out.println("scholarship");
@@ -73,7 +90,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test student receive scholarship I
+     */
     @Test
     public void testScholarship6() {
         System.out.println("scholarship");
@@ -83,7 +103,10 @@ public class ScholarshipTest {
         String result = Scholarship.scholarship(averagePoint, trainingPoint);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test student receive scholarship II
+     */
     @Test
     public void testScholarship7() {
         System.out.println("scholarship");
