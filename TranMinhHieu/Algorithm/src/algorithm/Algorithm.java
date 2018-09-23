@@ -1,18 +1,14 @@
 package algorithm;
 
 /**
- *
+ * This class supports some common algorithms
  * @author Tran Minh Hieu
  */
 public class Algorithm {
-
-    private static void printArray(int[] array) {
-        for(int i = 0; i < array.length; ++i) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
-    }
     
+    /**
+     * This function sorts an integer array in non-decreasing order
+     */
     public static int[] insertionSort(int[] array) {
         if(array == null) {
             return null;
@@ -30,6 +26,9 @@ public class Algorithm {
         return result;
     }
     
+    /**
+     * Main function
+     */
     public static void main(String[] args) {
         
     }
