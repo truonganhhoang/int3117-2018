@@ -1,8 +1,3 @@
-/**
- * Created by MyPC on 06/10/2016.
- */
-package oop.util;
-
 import java.util.EmptyStackException;
 
 public class Stack {
