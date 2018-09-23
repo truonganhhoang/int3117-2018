@@ -12,11 +12,10 @@ public class Stack {
     public Stack() {}
 
     public void push(String data) {
-        ++Size;
         Node newNode = new Node(data);
-
         newNode.next = head;
         head = newNode;
+		++Size;
     }
 
     public String pop() {
@@ -26,8 +25,8 @@ public class Stack {
 
         String data = head.data;
         head = head.next;
-
         --Size;
+		
         return(data);
     }
 

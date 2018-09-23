@@ -1,10 +1,5 @@
-package oop.util;
-
 import junit.framework.TestCase;
 
-/**
- * Created by MyPC on 06/10/2016.
- */
 public class StackTest extends TestCase {
 
     @org.junit.BeforeClass
