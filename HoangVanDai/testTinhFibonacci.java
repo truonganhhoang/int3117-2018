@@ -18,7 +18,7 @@ public class testTinhFibonacci {
         int n = -2147483648;
         Bai1 instance = new Bai1();
         int expResult = -1;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 
@@ -27,7 +27,7 @@ public class testTinhFibonacci {
         int n = -2147483647;
         Bai1 instance = new Bai1();
         int expResult = -1;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 
@@ -36,7 +36,7 @@ public class testTinhFibonacci {
         int n = -1;
         Bai1 instance = new Bai1();
         int expResult = -1;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 
@@ -45,7 +45,7 @@ public class testTinhFibonacci {
         int n = 0;
         Bai1 instance = new Bai1();
         int expResult = 0;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 
@@ -54,7 +54,7 @@ public class testTinhFibonacci {
         int n = 1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 
@@ -63,7 +63,7 @@ public class testTinhFibonacci {
         int n = 3;
         Bai1 instance = new Bai1();
         int expResult = 2;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 
@@ -72,7 +72,7 @@ public class testTinhFibonacci {
         int n = 20;
         Bai1 instance = new Bai1();
         int expResult = 6765;
-        int result = instance.TinhFibonacci(n);
+        int result = instance.tinhFibonacci(n);
         assertEquals(expResult, result);
     }
 }
