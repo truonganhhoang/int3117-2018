@@ -18,7 +18,7 @@ public class testTimUocChungLonNhat {
         int b = 0;
         Bai1 instance = new Bai1();
         int expResult = -1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
     }
 
@@ -28,9 +28,9 @@ public class testTimUocChungLonNhat {
         int b = 1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -40,9 +40,9 @@ public class testTimUocChungLonNhat {
         int b = -1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -52,9 +52,9 @@ public class testTimUocChungLonNhat {
         int b = -1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -64,9 +64,9 @@ public class testTimUocChungLonNhat {
         int b = 1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -76,9 +76,9 @@ public class testTimUocChungLonNhat {
         int b = 1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -88,9 +88,9 @@ public class testTimUocChungLonNhat {
         int b = -1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -100,9 +100,9 @@ public class testTimUocChungLonNhat {
         int b = -1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -112,9 +112,9 @@ public class testTimUocChungLonNhat {
         int b = 0;
         Bai1 instance = new Bai1();
         int expResult = 2147483647 + 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -124,9 +124,9 @@ public class testTimUocChungLonNhat {
         int b = 0;
         Bai1 instance = new Bai1();
         int expResult = 2147483647;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -136,9 +136,9 @@ public class testTimUocChungLonNhat {
         int b = 2147483647;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -148,7 +148,7 @@ public class testTimUocChungLonNhat {
         int b = 0;
         Bai1 instance = new Bai1();
         int expResult = 2147483647;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
 
     }
@@ -159,9 +159,9 @@ public class testTimUocChungLonNhat {
         int b = 0;
         Bai1 instance = new Bai1();
         int expResult = 2147483646;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -171,9 +171,9 @@ public class testTimUocChungLonNhat {
         int b = 1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -183,9 +183,9 @@ public class testTimUocChungLonNhat {
         int b = 1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -195,9 +195,9 @@ public class testTimUocChungLonNhat {
         int b = -1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
@@ -207,9 +207,9 @@ public class testTimUocChungLonNhat {
         int b = -1;
         Bai1 instance = new Bai1();
         int expResult = 1;
-        int result = instance.TimUocChungLonNhat(a, b);
+        int result = instance.timUocChungLonNhat(a, b);
         assertEquals(expResult, result);
-        int result2 = instance.TimUocChungLonNhat(b, a);
+        int result2 = instance.timUocChungLonNhat(b, a);
         assertEquals(expResult, result2);
     }
 
