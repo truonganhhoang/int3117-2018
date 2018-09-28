@@ -5,5 +5,5 @@
 ## Bài tập cá nhân
 * Tuần 1, 2 (về jUnit): [xem tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Algorithm) (dùng jUnit để test hàm insertionSort của lớp Algorithm)
 * Tuần 3 (đánh giá chất lượng code của các bạn):
-  * PhungCongMinh: https://github.com/truonganhhoang/int3117-2018/issues/72
-  * NguyenDucNhien: https://github.com/truonganhhoang/int3117-2018/issues/73
+  * PhungCongMinh: [xem issue #72](https://github.com/truonganhhoang/int3117-2018/issues/72)
+  * NguyenDucNhien: [xem issue #73](https://github.com/truonganhhoang/int3117-2018/issues/73)
