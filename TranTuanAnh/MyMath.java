@@ -1,6 +1,9 @@
 import java.util.*;
 public class MyMath {
-  public static boolean isPrime(int number) {
+	private MyMath() {
+	}
+
+	public static boolean isPrime(int number) {
     if (number >= 2) {
       if (number % 2 == 0) {
         if (number == 2)
