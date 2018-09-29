@@ -7,4 +7,4 @@
 * Tuần 3 (đánh giá chất lượng code của các bạn):
   * PhungCongMinh: [xem issue #72](https://github.com/truonganhhoang/int3117-2018/issues/72)
   * NguyenDucNhien: [xem issue #73](https://github.com/truonganhhoang/int3117-2018/issues/73)
-* Tuần 4 (kiểm tra mức độ bao phủ (coverage) của jUnit): kết quả 100% [xem ảnh tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Images/coverage.png)
+* Tuần 4 (kiểm tra mức độ bao phủ [coverage] của jUnit): Kết quả 100% - [xem ảnh tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Images/coverage.png)
