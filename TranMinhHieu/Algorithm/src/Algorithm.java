@@ -1,15 +1,13 @@
-package algorithm;
-
 /**
  * This class supports some common algorithms
  * @author Tran Minh Hieu
  */
-public class Algorithm {
+class Algorithm {
     
     /**
      * This function sorts an integer array in non-decreasing order
      */
-    public static int[] insertionSort(int[] array) {
+    public int[] insertionSort(int[] array) {
         if(array == null) {
             return null;
         }
@@ -24,13 +22,6 @@ public class Algorithm {
             result[j + 1] = key;
         }
         return result;
-    }
-    
-    /**
-     * Main function
-     */
-    public static void main(String[] args) {
-        
     }
     
 }
