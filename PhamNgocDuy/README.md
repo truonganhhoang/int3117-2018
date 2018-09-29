@@ -1,6 +1,4 @@
-## Phạm Ngọc Duy
-
-### MSV: 16020925
+## Phạm Ngọc Duy (16020925)
 
 ### Repo nhóm 18: [https://github.com/hieutm2198/int3117-2018](https://github.com/hieutm2198/int3117-2018)
 
