@@ -1,5 +1,3 @@
-package Cau3;
-
 /**
  * Lop hinh vuong
  * @author Anh Tran
@@ -11,7 +9,7 @@ public class Square extends Rectangle {
     /**
      * khoi tao mac dinh
      */
-    public Square(){
+    public Square() {
         super();
         side = 1.0;
     }
@@ -19,7 +17,7 @@ public class Square extends Rectangle {
      * khoi tao tham so
      * @param s canh
      */
-    public Square(double s){
+    public Square(double s) {
         side = s;
     }
     /**
@@ -28,7 +26,7 @@ public class Square extends Rectangle {
      * @param c mau sac
      * @param f dung sai
      */
-    public Square(double s, String c, boolean f){
+    public Square(double s, String c, boolean f) {
         side = s;
         super.color = c;
         super.filled = f;
@@ -37,28 +35,28 @@ public class Square extends Rectangle {
      * tra ve canh
      * @return side
      */
-    public double getSide(){
+    public double getSide() {
         return side;
     }
     /**
      * khoi tao gia tri canh moi
      * @param s canh
      */
-    public void setSide(double s){
+    public void setSide(double s) {
         s = side;
     }
     /**
      * khoi tao gia tri canh bang voi chieu rong
      * @param s canh
      */
-    public void setWith(double s){
+    public void setWith(double s) {
         s = width;
     }
     /**
      * Khoi tap gia tri canh bang chieu dai
      * @param s canh
      */
-    public void setLength(double s){
+    public void setLength(double s) {
         s = length;
     }
     
