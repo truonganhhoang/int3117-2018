@@ -1,4 +1,3 @@
-package oop.util;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * Created by TienToan on 04/10/2016.
  */
-public class StackTest {
+public class stackTest {
     Stack s;
 
     @Before
@@ -62,5 +61,19 @@ public class StackTest {
     public void TestGetTop() {
         s.push("1");
         assertEquals("1", s.getTop());
+    }
+    
+    @Test
+    public void testPopWithEmptyStack() {
+    	Stack s1 = new Stack();
+    	assertEquals(null, s1.pop());
+    }
+    
+    @Test
+    public void testPopWithManyElement() {
+    	Stack s1 = new Stack();
+    	s1.push("1");
+    	s1.push("2");
+    	assertEquals("2", s1.pop());
     }
 }
