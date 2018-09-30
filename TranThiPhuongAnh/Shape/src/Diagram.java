@@ -1,5 +1,3 @@
-package Cau3;
-
 import java.util.ArrayList;
 
 /**
@@ -22,7 +20,7 @@ public abstract class Diagram {
      * Ham xoa tat ca cac hinh tron khoi danh sach Layer
      */
     public void eraseCircleOfLayerInDiagram(){
-        for(int i=0; i<listLayer.size() ; i++){
+        for(int i = 0; i < listLayer.size() ; i++){
             if(!listLayer.isEmpty()){
                 listLayer.get(i).eraseCircleOfShape();
             }
@@ -34,8 +32,8 @@ public abstract class Diagram {
      * @param d 
      */
     public void notDrawShapeOfLayerInDiagram(Diagram d){
-        if(d.visible = false){
-            for(int i=0; i<listLayer.size() ; i++){
+        if(d.visible == false){
+            for(int i = 0; i < listLayer.size(); i++){
                 if(!listLayer.isEmpty()){
                     listLayer.get(i).eraseShapeOfLayer();
                 }
@@ -60,12 +58,10 @@ public abstract class Diagram {
         Circle c = new Circle();
         c.radius = 2.0;
         
-        
         //hinh chu nhat
         Rectangle r = new Rectangle();
         r.width = 2.0;
         r.length = 3.0;
-        
         
         //hinh vuong
         Square s = new Square();
@@ -76,7 +72,6 @@ public abstract class Diagram {
         t.canh1 = 2.0;
         t.canh2 = 3.0;
         t.canh3 = 2.0;
-        
         
         System.out.print(c.toString()+"\n");
         System.out.print(r.toString()+"\n");
