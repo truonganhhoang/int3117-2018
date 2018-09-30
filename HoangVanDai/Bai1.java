@@ -8,11 +8,11 @@ package bai1;
 public class Bai1 {
 
     /**
-     * Phương thức tìm ước chung lớn nhất của 2 số nguyên
+     * Phương thức tìm ước chung lớm nhất của 2 số nguyên
      *
      * @param a số thứ nhất
      * @param b số thứ hai
-     * @return Ước chung lớn nhất của 2 số a, b
+     * @return ước chung lớn nhất của 2 số nguyên a, b
      */
     public int timUocChungLonNhat(int a, int b) {
         int tam = 0;
@@ -37,7 +37,7 @@ public class Bai1 {
     /**
      * Phương thức tính Fibonacci của 1 số nguyên dương
      *
-     * @param n là một số nguyên dương bất kỳ
+     * @param n là nguyên cần tính Fibonacci
      * @return Fibonacci của số nguyên dương n
      */
     public int tinhFibonacci(int n) {
