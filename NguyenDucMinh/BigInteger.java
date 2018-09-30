@@ -57,8 +57,7 @@ public class BigInteger
                 String t2; t2 = other.st.substring(i,i+1);
                 int v = Integer.parseInt(t2);
 
-                if (u > v) return 1;
-                if (u < v) return -1;
+                if (u > v) return 1; if (u < v) return -1;
             }
         }
         return 0;
@@ -111,11 +110,7 @@ public class BigInteger
         String s = "";
 
         int ok = 0; int check = s1.compareTo(s2);
-        if (check == -1) {
-            String tmp = s1;
-            s1 = s2;
-            s2 = tmp;
-            ok = 1;
+        if (check == -1) { String tmp = s1; s1 = s2; s2 = tmp; ok = 1;
         }
         if (check == 0) return "0";
 
