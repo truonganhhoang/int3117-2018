@@ -1,17 +1,10 @@
+import java.util.EmptyStackException;
 import junit.framework.TestCase;
 
 public class StackTest extends TestCase {
-
-    @org.junit.BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @org.junit.AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-    
     /**
      * Test of push method, of class Stack.
+     * @throws java.lang.Exception
      */
     @org.junit.Test
     public void testPush() throws Exception {
@@ -23,8 +16,9 @@ public class StackTest extends TestCase {
     
     /**
      * Test of top method, of class Stack.
+     * @throws java.lang.Exception
      */
-    public void testPushNTop() throws Exception {
+    public void testTop() throws Exception {
         Stack stack = new Stack();
         stack.push("hello");
 
@@ -38,6 +32,17 @@ public class StackTest extends TestCase {
 
         assertEquals("Im Quang", stack.pop());
         assertEquals("Hello", stack.pop());
+    }
+    
+    public void testEmptyPop() throws Exception {
+        Stack stack = new Stack();
+    
+        try {
+            stack.pop();
+        } catch (EmptyStackException e) {
+        } catch (Exception e2) {
+            fail("caught exception but it is not EmptyStackException");
+        }
     }
 
     public void testIsEmpty() throws Exception {
