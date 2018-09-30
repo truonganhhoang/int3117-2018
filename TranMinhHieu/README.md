@@ -8,5 +8,5 @@
   * PhungCongMinh: [xem issue #72](https://github.com/truonganhhoang/int3117-2018/issues/72)
   * NguyenDucNhien: [xem issue #73](https://github.com/truonganhhoang/int3117-2018/issues/73)
 * Tuần 4:
- * Kiểm tra mức độ bao phủ (coverage) của bài jUnit tuần 1, 2: Kết quả 100% - [xem ảnh tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Images/coverage.png)
- * Demo Cypress
+  * Kiểm tra mức độ bao phủ (coverage) của bài jUnit tuần 1, 2: Kết quả 100% - [xem ảnh tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Images/coverage.png)
+  * Demo Cypress
