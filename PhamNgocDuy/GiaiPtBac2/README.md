@@ -9,6 +9,6 @@
 
 ### Bài tập 3
 - Junit 100% Coverage
-![100% coverage PTB2](https://github.com/hieutm2198/int3117-2018/blob/master/PhamNgocDuy/coveragePTB2.png)
+![100% coverage PTB2](https://github.com/hieutm2198/int3117-2018/blob/master/PhamNgocDuy/image/coveragePTB2.png)
     - Xem coverage percent: [./.jacocoverage/report.html/giaiptbac2/PhuongTrinhBac2.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/hieutm2198/int3117-2018/master/PhamNgocDuy/GiaiPtBac2/.jacocoverage/report.html/giaiptbac2/PhuongTrinhBac2.html)
     - Xem coverage trên source-code: [./.jacocoverage/report.html/giaiptbac2/PhuongTrinhBac2.java.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/hieutm2198/int3117-2018/master/PhamNgocDuy/GiaiPtBac2/.jacocoverage/report.html/giaiptbac2/PhuongTrinhBac2.java.html)
