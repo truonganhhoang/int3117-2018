@@ -1,5 +1,3 @@
-package Cau3;
-
 /**
  * lop hinh dang
  * @author Anh Tran
@@ -13,7 +11,7 @@ public abstract class Shape extends Diagram {
     /**
      * Khoi tao mac dinh
      */
-    public Shape(){
+    public Shape() {
         color = "yellow";
         filled = true;
     }
@@ -22,7 +20,7 @@ public abstract class Shape extends Diagram {
      * @param c mau sac
      * @param f dung sai
      */
-    public Shape(String c, boolean f){
+    public Shape(String c, boolean f) {
         color = c;
         filled = f;
     }
@@ -30,28 +28,28 @@ public abstract class Shape extends Diagram {
      * tra ve mau sac
      * @return color
      */
-    public String getColor(){
+    public String getColor() {
         return color;
     }
     /**
      * khoi tao gia tri mau moi
      * @param c 
      */
-    public void setColor(String c){
+    public void setColor(String c) {
         c = color;
     }
     /**
      * tra ve dung sai
      * @return filled
      */
-    public boolean getFilled(){
+    public boolean getFilled() {
         return filled;
     }
     /**
      * khoi tao gia tri dung hoac sai moi
      * @param f 
      */
-    public void setFilled(boolean f){
+    public void setFilled(boolean f) {
         f = filled;
     }
 }
