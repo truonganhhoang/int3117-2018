@@ -113,6 +113,20 @@ public class BillTest extends TestCase {
 		}
 		assertEquals(10000*10, bill.calculateTypePrice("CD"));
 	}
+	
+	@Test
+	public void testGetTypePriceWithUnavalableType() {
+		Good tmp = new Good("a","a","a",10000);
+		for(int i =0 ; i<10;i ++) {
+			bill.getGoods().add(tmp);
+		}
+		CD cd = new CD("a","a","a",10000,70);
+		for(int i = 0 ; i < 10;i++) {
+			bill.getGoods().add(cd);
+		}
+		assertEquals(0, bill.calculateTypePrice("UnavailableType"));
+	}
+	
 	public BillTest(String name) {
 		super(name);
 	}
