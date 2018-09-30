@@ -10,6 +10,6 @@
   * LeQuangDao: issue #111 [xem tại đây](https://github.com/truonganhhoang/int3117-2018/issues/111)
   * PhamNgocDuy: issue #113 [xem tại đây](https://github.com/truonganhhoang/int3117-2018/issues/113)
 * Tuần 4:
-  * Đánh giá độ phủ (coverage) của jUnit bài tập tuần 1 ([Bài GiaiThua](https://github.com/TranPhuongAnh/int3117-2018/tree/master/TranThiPhuongAnh/GiaiThua/src)): [xem ảnh tại đây](https://github.com/TranPhuongAnh/int3117-2018/blob/master/TranThiPhuongAnh/img/coverageGiaiThua.PNG)
+  * Đánh giá độ phủ (coverage) của jUnit bài tập tuần 1 (Bài GiaiThua): [xem ảnh tại đây](https://github.com/TranPhuongAnh/int3117-2018/blob/master/TranThiPhuongAnh/img/coverageGiaiThua.PNG)
   * Demo Cypress:
  
