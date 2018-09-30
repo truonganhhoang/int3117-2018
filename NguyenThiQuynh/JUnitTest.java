@@ -1,3 +1,4 @@
+import junit.framework.Assert;
 import junittest.MaxArray;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -26,18 +27,7 @@ public class JUnitTest {
         MaxArray maxArray = new MaxArray();
         int array[] = {2, 3, 7, 9, 11};
         int result = 12;
-        assertEquals(result, maxArray.findArrayMax(array));
-    }
-    
-    /*
-    This function test the null array
-    */
-    @Test 
-    public void testArrayNull() {
-        MaxArray maxArray = new MaxArray();
-        int array[] = {};
-        int result = 1;
-        assertEquals(result, maxArray.findArrayMax(array));
+        Assert.assertNotSame(result, maxArray.findArrayMax(array) );
     }
     
     /*
@@ -48,7 +38,7 @@ public class JUnitTest {
         MaxArray maxArray = new MaxArray();
         int array[] = {20, 8, 2, 3, 1};
         int result = array[0];
-        assertEquals(result, maxArray.findArrayMax(array));
+        Assert.assertEquals(result, maxArray.findArrayMax(array));
     }
     
     /*
@@ -59,6 +49,6 @@ public class JUnitTest {
         MaxArray maxArray = new MaxArray();
         int array[] = {1, 2, 3, 5, 7};
         int result = array[4];
-        assertEquals(result, maxArray.findArrayMax(array));
+        Assert.assertEquals(result, maxArray.findArrayMax(array));
     }
 }
