@@ -1,5 +1,3 @@
-package Cau3;
-
 /**
  * lop hinh tron
  * @author Anh Tran
@@ -62,7 +60,7 @@ public class Circle extends Shape {
      * @return 
      */
     public double getPerimeter(){
-        return 2*pi*radius;
+        return 2 * pi * radius;
     }
     
     /**
