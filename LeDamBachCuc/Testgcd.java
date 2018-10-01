@@ -3,7 +3,7 @@ package Test;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class Testgcd {
+public class GCDTest {
     @Test
     public void test1(){
         int gcd = GCD.gcd(50,25);
@@ -30,19 +30,7 @@ public class Testgcd {
 
     @Test
     public void test5(){
-        int gcd = GCD.gcd(2147483647,13);
-        assertEquals(gcd,1);
-    }
-
-    @Test
-    public void test6(){
-        int gcd = GCD.gcd(2147483646,13);
-        assertEquals(gcd,1);
-    }
-
-    @Test
-    public void test7(){
-        int gcd = GCD.gcd(2147483648,13);
+        int gcd = GCD.gcd(Integer.MAX_VALUE,13);
         assertEquals(gcd,1);
     }
 }
