@@ -1,6 +1,5 @@
 package main;
-
-public class Fibonacci {
+ public class Fibonacci {
     public static int getFibonacci(int n){
         if (n < 0){
             return 0;
