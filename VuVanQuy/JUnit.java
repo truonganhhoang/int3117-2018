@@ -2,15 +2,15 @@ package JUnit;
 
 public class JUnit {
     public int[] sort(int array[]) {
-        boolean check = false;
+        boolean check = true;
 
-        for (int i = 0; i < array.length - 1; i++) {
+        for (int i = 0; i < array.length ; i++) {
             check = true;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] > array[j]) {
-                    int temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
+            for (int j = 0; j < array.length-1; j++) {
+                if (array[j] > array[j+1]) {
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
                     check = false;
                 }
             }
