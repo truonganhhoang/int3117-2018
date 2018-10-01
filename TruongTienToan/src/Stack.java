@@ -1,7 +1,6 @@
 /**
  * Created by TienToan on 04/10/2016.
  */
-package oop.util;
 
 public class Stack {
     private static class Node {
