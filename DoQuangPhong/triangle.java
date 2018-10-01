@@ -21,17 +21,16 @@ public class triangle {
         return side1 < 0 || side2 < 0 || side3 < 0;
     }
 
-    private boolean qualification() {
+    private boolean isQualified() {
         return side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1;
     }
-
 
     public triangle(double side1, double side2, double side3) throws Exception {
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
 
-        if (allSizeZero() || hasNegativeSide() || qualification()) {
+        if (allSizeZero() || hasNegativeSide() || isQualified()) {
             throw new Exception();
         }
     }

@@ -8,11 +8,13 @@ public class triangle_test {
 
         assertEquals(triangle.TriangleKind.EQUILATERAL, t1.getKind());
     }
+
     @Test
     public void isoscelesTriangle() throws Exception {
         triangle t1 = new triangle(3, 5, 5);
         assertEquals(triangle.TriangleKind.ISOSCELES, t1.getKind());
     }
+
     @Test
     public void isoscelesTriangle_1() throws Exception {
         triangle t1 = new triangle(5, 3, 5);
@@ -42,26 +44,29 @@ public class triangle_test {
 
     @Test(expected = Exception.class)
     public void allSizeIsZero() throws Exception {
-        new triangle(0, 0, 0);
-    }
+        new triangle(0, 0, 0); }
+
+    @Test(expected = Exception.class)
+    public void allSizeIsZero_1() throws Exception {
+        new triangle(0, 0, 1); }
 
     @Test(expected = Exception.class)
     public void negativeSide() throws Exception {
-        new triangle(-1,3,4);
-    }
+        new triangle(-1,3,4); }
 
     @Test(expected = Exception.class)
     public void negativeSide_1() throws Exception {
-        new triangle(3,3,-4);
-    }
+        new triangle(3,3,-4); }
 
     @Test(expected = Exception.class)
-    public void quailification() throws Exception {
-        new triangle(1, 1, 3);
-    }
+    public void isQualified() throws Exception {
+        new triangle(1, 1, 3); }
 
     @Test(expected = Exception.class)
-    public void quailification_1() throws Exception {
-        new triangle(2, 4, 2);
-    }
+    public void isQualified_1() throws Exception {
+        new triangle(1, 3, 1); }
+
+    @Test(expected = Exception.class)
+    public void isQualified_2() throws Exception {
+        new triangle(3, 1, 1); }
 }
