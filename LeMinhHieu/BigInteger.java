@@ -60,8 +60,8 @@ public class BigInteger
                  long rem= 0;
                  long cur;
                  int mark= Math.min(this.saveSpot.length(), other.saveSpot.length());
-                 for (int i= 0;i< mark; i++) {
-                     cur= Long.parseLong(this.saveSpot.substring(i,i+1))
+                 for (int i = 0; i < mark; i++) {
+                     cur= Long.parseLong(this.saveSpot.substring(i, i+1))
                          + Long.parseLong(other.saveSpot.substring(i, i+1)) + rem;
                      rem= cur/10;
                      cur= cur%10;
@@ -70,8 +70,8 @@ public class BigInteger
                  if (this.saveSpot.length() > other.saveSpot.length())
                      sss= this.saveSpot;
                  else sss= other.saveSpot;
-                 for (int i= mark; i< Math.max(this.saveSpot.length(), other.saveSpot.length()); i++) {
-                     cur= Long.parseLong(sss.substring(i,i+1)) + rem;
+                 for (int i = mark; i < Math.max(this.saveSpot.length(), other.saveSpot.length()); i++) {
+                     cur= Long.parseLong(sss.substring(i, i+1)) + rem;
                      rem= cur/10;
                      cur= cur%10;
                      ss= ss + Long.toString(cur);
@@ -113,7 +113,7 @@ public class BigInteger
                     tgAlter= -1;
                 }
                 else if (this.saveSpot.length()== other.saveSpot.length()) {
-                    for (int i= 0;i< this.saveSpot.length(); i++)
+                    for (int i = 0; i < this.saveSpot.length(); i++)
                         if (Long.parseLong(this.saveSpot.substring(i,i+1)) <
                             Long.parseLong(other.saveSpot.substring(i,i+1))) {
                             tgAlter= -1;
@@ -129,17 +129,17 @@ public class BigInteger
                 int mark= tg2.saveSpot.length();
                 String ss= "";
                 long rem= 0, cur;
-                for (int i=0;i< mark;i++) {
-                    cur= Long.parseLong(tg1.saveSpot.substring(i,i+1))
-                        - Long.parseLong(tg2.saveSpot.substring(i,i+1)) - rem;
+                for (int i = 0; i < mark; i++) {
+                    cur= Long.parseLong(tg1.saveSpot.substring(i, i+1))
+                        - Long.parseLong(tg2.saveSpot.substring(i, i+1)) - rem;
                     rem= (cur < 0) ? 1 : 0;
-                    cur = Math.abs(cur+10)%10;
+                    cur = Math.abs(cur + 10)%10;
                     ss= ss + Long.toString(cur);
                 }
-                for (int i=mark;i<tg1.saveSpot.length();i++) {
-                    cur= Long.parseLong(tg1.saveSpot.substring(i,i+1)) - rem;
+                for (int i = mark; i < tg1.saveSpot.length(); i++) {
+                    cur= Long.parseLong(tg1.saveSpot.substring(i, i+1)) - rem;
                     rem= (cur < 0) ? 1 : 0;
-                    cur= Math.abs(cur+10)%10;
+                    cur= Math.abs(cur + 10)%10;
                     ss= ss + Long.toString(cur);
                 }
                 int i= ss.length();

@@ -8,8 +8,8 @@ public class Testing
     {
         BigInteger bigI = new BigInteger(1234L);
         assertEquals("1234", bigI.toString());
-        BigInteger bigS = new BigInteger("0111102010");
-        assertEquals("111102010", bigS.toString());
+        BigInteger bigS = new BigInteger("-0111102010");
+        assertEquals("-111102010", bigS.toString());
         bigS = new BigInteger("0000000");
         assertEquals("0", bigS.toString());
         bigS = new BigInteger("009");
@@ -21,6 +21,8 @@ public class Testing
     {
         BigInteger bigI = new BigInteger("0709");
         assertEquals(709L, bigI.toLong());
+        bigI = new BigInteger("-1");
+        assertEquals(-1L, bigI.toLong());
     }
 
     @Test
@@ -68,12 +70,20 @@ public class Testing
 
         assertEquals(new BigInteger("111111111111111111102"), difference);
     }
-    
+
     @Test
     public void testForFun() {
-        BigInteger bitInt1= new BigInteger(-155);
-        BigInteger bitInt2= new BigInteger(149);
-        BigInteger middle= bitInt1.add(bitInt2);
+        BigInteger bigInt1= new BigInteger(-155);
+        BigInteger bigInt2= new BigInteger(149);
+        BigInteger middle= bigInt1.add(bigInt2);
         assertEquals("-6", middle.toString());
+        middle.compareTo(bigInt2.add(bigInt1));
+        assertFalse(middle.subtract(bigInt2).equals(bigInt2.subtract(middle)));
+
+        bigInt1= new BigInteger(-1L);
+        bigInt2= new BigInteger(-99L);
+        middle= bigInt1.clone();
+        assertEquals(bigInt1.add(bigInt2), bigInt2.add(bigInt1));
+        assertEquals(bigInt1.subtract(bigInt2).toLong(), bigInt2.subtract(bigInt1).toLong()*middle.toLong());
     }
 }

@@ -1,12 +1,12 @@
-public class BigInteger
-{
-    private static int numberOfDigit = 15; //number of digits store in a element
-    private static long base = (long) 1e15;
+public class BigInteger {
+    private static int NUMBER_OF_DIGITS = 15; //number of digits store in a element
+    private static long BASE = (long) 1e15;
     private long[] value; //store elements
     private int l; // number of elements
     private int signum; //0: this = 0, -1: this < 0; 1: this > 0;
 
-    public BigInteger() {}
+    public BigInteger() {
+    }
 
     public BigInteger(long init) {
         long tmp = Math.abs(init);
@@ -14,46 +14,46 @@ public class BigInteger
         l = 0;
         while (tmp > 0) {
             l++;
-            tmp /= base;
+            tmp /= BASE;
         }
+
+        if (l == 0) l = 1;
 
         value = new long[l];
         tmp = Math.abs(init);
 
         if (tmp == 0) value[0] = 0;
         else
-            for (int i = 0; i < l ; ++i) {
-                value[i] = tmp % base;
-                tmp /= base;
+            for (int i = 0; i < l; ++i) {
+                value[i] = tmp % BASE;
+                tmp /= BASE;
             }
 
         if (init < 0) signum = -1;
-        else
-            if (init > 0) signum = 1;
-            else signum = 0;
+        else if (init > 0) signum = 1;
+        else signum = 0;
     }
 
     public BigInteger(String init) {
         if ('-' == init.charAt(0)) {
             signum = -1;
             init = init.substring(1);
-        }
-        else signum = 1;
+        } else signum = 1;
 
 
         int j = 0;
         while ('0' == init.charAt(j) && j != init.length() - 1) ++j;
         init = init.substring(j, init.length());
 
-        l = (init.length() - 1) / numberOfDigit + 1;
+        l = (init.length() - 1) / NUMBER_OF_DIGITS + 1;
 
-        while (init.length() < l * numberOfDigit) init = '0' + init;
+        while (init.length() < l * NUMBER_OF_DIGITS) init = '0' + init;
         value = new long[l];
 
         l = 0;
 
-        for (int i = init.length() - numberOfDigit; i >= 0; i -= numberOfDigit)
-            value[l++] = Long.parseLong(init.substring(i, i + numberOfDigit));
+        for (int i = init.length() - NUMBER_OF_DIGITS; i >= 0; i -= NUMBER_OF_DIGITS)
+            value[l++] = Long.parseLong(init.substring(i, i + NUMBER_OF_DIGITS));
 
         if (1 == l && 0 == value[0]) signum = 0;
     }
@@ -95,7 +95,7 @@ public class BigInteger
 
         for (int i = 0; i < l; ++i) {
             res += value[i] * tmp;
-            tmp = tmp * base;
+            tmp = tmp * BASE;
         }
 
         if (-1 == signum) res = -res;
@@ -120,8 +120,8 @@ public class BigInteger
         for (int i = 0; i < res.l; ++i) {
             long tmp = (i >= this.l ? 0 : this.value[i]) +
                     (i >= other.l ? 0 : other.value[i]) + carry;
-            res.value[i] = tmp % base;
-            carry = tmp / base;
+            res.value[i] = tmp % BASE;
+            carry = tmp / BASE;
         }
 
         if (carry > 0) res.value[res.l++] = carry;
@@ -147,7 +147,7 @@ public class BigInteger
                 res.value[i] = (this.value[i])
                         - (i >= other.l ? 0 : other.value[i]) - carry;
                 if (res.value[i] < 0) {
-                    res.value[i] += base;
+                    res.value[i] += BASE;
                     carry = 1;
                 } else carry = 0;
             }
@@ -158,7 +158,7 @@ public class BigInteger
                 res.value[i] = other.value[i] - (i >= this.l ? 0 : this.value[i]) - carry;
 
                 if (res.value[i] < 0) {
-                    res.value[i] += base;
+                    res.value[i] += BASE;
                     carry = 1;
                 } else carry = 0;
             }
@@ -173,13 +173,11 @@ public class BigInteger
 
     private int compareAbsTo(BigInteger other) {
         if (this.l < other.l) return -1;
-        else
-        if (this.l > other.l) return 1;
+        else if (this.l > other.l) return 1;
 
         for (int i = this.l - 1; i >= 0; --i)
             if (this.value[i] < other.value[i]) return -1;
-            else
-            if (this.value[i] > other.value[i]) return 1;
+            else if (this.value[i] > other.value[i]) return 1;
 
         return 0;
     }
@@ -189,11 +187,9 @@ public class BigInteger
             int tmp = compareAbsTo(other);
             if (signum >= 0) return tmp;
             return -tmp;
-        }
-        else {
+        } else {
             if (signum < other.signum) return -1;
-            if (signum > other.signum) return 1;
-            return 0;
+            else return 1;
         }
     }
 
