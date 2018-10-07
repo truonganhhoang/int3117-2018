@@ -34,8 +34,10 @@ public class VendingMachineImpl implements VendingMachine {
         }
 
     }
-
     
+    /*
+        Select item and get it's value
+     */
     public long selectItemAndGetPrice(Item item) {
         if (itemInventory.hasItem(item)) {
             currentItem = item;
@@ -43,14 +45,18 @@ public class VendingMachineImpl implements VendingMachine {
         }
         throw new SoldOutException("Sold Out, Please buy another item");
     }
-
    
+   /*
+        Add coin to vending machine
+    */
     public void insertCoin(Coin coin) {
         currentBalance = currentBalance + coin.getDenomination();
         cashInventory.add(coin);
     }
-
     
+    /*
+        Return bucket with item want buy and coin
+     */
     public Bucket<Item, List<Coin>> collectItemAndChange() {
         Item item = collectItem();
         totalSales = totalSales + currentItem.getPrice();
@@ -60,6 +66,10 @@ public class VendingMachineImpl implements VendingMachine {
         return new Bucket<Item, List<Coin>>(item, change);
     }
 
+    /*
+        Return item want to buy
+        Check if coin is enoudh to buy
+     */
     private Item collectItem() throws NotSufficientChangeException,
             NotFullPaidException {
         if (isFullPaid()) {
@@ -74,6 +84,9 @@ public class VendingMachineImpl implements VendingMachine {
         throw new NotFullPaidException("Price not full paid, remaining : ", remainingBalance);
     }
 
+    /*
+        Return coin payback
+     */
     private List<Coin> collectChange() {
         long changeAmount = currentBalance - currentItem.getPrice();
         List<Coin> change = getChange(changeAmount);
@@ -83,6 +96,9 @@ public class VendingMachineImpl implements VendingMachine {
         return change;
     }
 
+    /*
+        return list coin will refund
+     */
     public List<Coin> refund() {
         List<Coin> refund = getChange(currentBalance);
         updateCashInventory(refund);
@@ -91,7 +107,9 @@ public class VendingMachineImpl implements VendingMachine {
         return refund;
     }
 
-
+    /*
+        Check full paid after put coin
+     */
     private boolean isFullPaid() {
         if (currentBalance >= currentItem.getPrice()) {
             return true;
@@ -99,7 +117,9 @@ public class VendingMachineImpl implements VendingMachine {
         return false;
     }
 
-
+    /*
+        Get list coin change with amount in
+     */
     private List<Coin> getChange(long amount) throws NotSufficientChangeException {
 
         List<Coin> changes = Collections.EMPTY_LIST;
@@ -141,6 +161,9 @@ public class VendingMachineImpl implements VendingMachine {
         return changes;
     }
 
+    /*
+        Reset vending machine
+    */
     public void reset() {
         cashInventory.clear();
         itemInventory.clear();
@@ -149,17 +172,25 @@ public class VendingMachineImpl implements VendingMachine {
         currentBalance = 0;
     }
 
+    /*
+        Print stats in vending machine
+     */
     public void printStats() {
         System.out.println("Total Sales : " + totalSales);
         System.out.println("Current Item Inventory : " + itemInventory);
         System.out.println("Current Cash Inventory : " + cashInventory);
     }
 
-
+    /*
+        Check if has sufficient to buy item
+     */
     private boolean hasSufficientChange() {
         return hasSufficientChangeForAmount(currentBalance - currentItem.getPrice());
     }
 
+    /*
+        Check if vending can payback
+     */
     private boolean hasSufficientChangeForAmount(long amount) {
         boolean hasChange = true;
         try {
@@ -171,6 +202,9 @@ public class VendingMachineImpl implements VendingMachine {
         return hasChange;
     }
 
+    /*
+        Update cash in inventory with list coin in
+     */
     private void updateCashInventory(List<Coin> change) {
         for (Coin c : change) {
             cashInventory.deduct(c);
