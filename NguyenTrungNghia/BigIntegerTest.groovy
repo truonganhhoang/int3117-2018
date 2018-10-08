@@ -1,8 +1,8 @@
-import org.junit.*;
-import static org.junit.Assert.*;
+package com.company
 
-public class BigIntegerTest
-{
+import org.junit.Test
+
+class BigIntegerTest extends groovy.util.GroovyTestCase {
     @Test
     public void testCreateBigIntegerFromInt()
     {
@@ -127,11 +127,14 @@ public class BigIntegerTest
     }
     @Test
     public void testCompareTo(){
-        BigInteger bigInt1 = new BigInteger("-0");
+        BigInteger bigInt1 = new BigInteger("-1");
+        BigInteger bigInt2 = new BigInteger("1");
 
-        assertEquals(bigInt1.compareTo(new BigInteger(0)), 0);
-        assertEquals(bigInt1.compareTo(new BigInteger(1)),-1);
-        assertEquals(bigInt1.compareTo(new BigInteger(-1)),1);
+        assertEquals(bigInt2.compareTo(bigInt1), 1);
+        assertEquals(bigInt1.compareTo(new BigInteger(-1)), 0);
+        assertEquals(bigInt1.compareTo(new BigInteger(2)),-1);
+        assertEquals(bigInt1.compareTo(new BigInteger(-2)),1);
+
     }
 
     @Test
