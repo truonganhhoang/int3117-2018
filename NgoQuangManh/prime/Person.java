@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Person;
+package person.prime;
 
 /**
  *
@@ -11,39 +11,39 @@ package Person;
  */
 public class Person {
 
-    private String _name;
-    private int _age;
+    private String name;
+    private int age;
     
-    public void SetName(String name) {
-        this._name = name;
+    public void setName(String name) {
+        this.name = name;
     }
     
-    public void SetAge(int age) {
-        this._age = age;
+    public void setAge(int age) {
+        this.age = age;
     }
     
-    public String GetName() {
-        return this._name;
+    public String getName() {
+        return this.name;
     }
     
-    public int GetAge() {
-        return this._age;
+    public int getAge() {
+        return this.age;
     }
     
     public Person() {        
     }
     
     public Person(String name, int age) {
-        this._name = name;
-        this._age = age;
+        this.name = name;
+        this.age = age;
     }
     
-    public boolean KiemTraNguyenTo() {
-        if (this._age < 2) {
+    public boolean checkPrime() {
+        if (this.age < 2) {
             return false;
         } else {
-            for (int i = 2; i < Math.sqrt(this._age); i++) {
-                if (this._age % i == 0) {
+            for (int i = 2; i < Math.sqrt(this.age); i++) {
+                if (this.age % i == 0) {
                     return false;
                 }
             }
