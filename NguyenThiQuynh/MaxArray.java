@@ -6,11 +6,6 @@ package junittest;
  */
 public class MaxArray {
     
-    /**
-     * This class find the max value of the array
-     * @param arr the given array
-     * @return the max value of the array
-     */
     public int findArrayMax(int arr[]) {
         int max = arr[0];
         

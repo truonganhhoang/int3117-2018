@@ -62,8 +62,8 @@ public class PhuongTrinhBac2 {
     /**
      * Hàm get số nghiệm của phương trình
      *
-     * @return số nghiệm của phương trình ( = 0 nếu vô nghiệm hoặc là phương
-     * trình bậc nhất vô số nghiệm)
+     * @return độ dài mảng trả về của getNghiem() -- số nghiệm của phương trình
+     * ( = 0 nếu vô nghiệm hoặc là phương trình bậc nhất vô số nghiệm)
      */
     public int getSoNghiem() {
         if (!this.isSolved) {

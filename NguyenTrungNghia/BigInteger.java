@@ -1,3 +1,5 @@
+package com.company;
+
 public class BigInteger
 {
     private String arr;
@@ -39,7 +41,6 @@ public class BigInteger
                 }
             }
         }
-
     }
 
     public boolean equals(Object other) {
@@ -118,6 +119,7 @@ public class BigInteger
             }
         }
     }
+    
     public BigInteger clone() {
         return new BigInteger(toString());
     }

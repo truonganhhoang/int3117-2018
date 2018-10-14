@@ -8,9 +8,6 @@ import static org.junit.Assert.*;
  */
 public class JUnitTest {
     
-    /*
-    This function test the true max value
-    */
     @Test
     public void testArrayTrue() {
         MaxArray maxArray = new MaxArray();
@@ -19,9 +16,6 @@ public class JUnitTest {
         assertEquals(result, maxArray.findArrayMax(array));
     }
     
-    /*
-    This function test the true max value
-    */
     @Test
     public void testArrayFalse() {
         MaxArray maxArray = new MaxArray();
@@ -30,9 +24,14 @@ public class JUnitTest {
         Assert.assertNotSame(result, maxArray.findArrayMax(array) );
     }
     
-    /*
-    This function test the uppper bound value of the array
-    */
+    @Test 
+    public void testArrayNull() {
+        MaxArray maxArray = new MaxArray();
+        int array[] = {};
+        int result = 1;
+        assertEquals(result, maxArray.findArrayMax(array));
+    }
+    
     @Test
     public void testArrayBegin() {
         MaxArray maxArray = new MaxArray();
@@ -41,9 +40,6 @@ public class JUnitTest {
         Assert.assertEquals(result, maxArray.findArrayMax(array));
     }
     
-    /*
-    This function test the uppper lower value of the array
-    */
     @Test
     public void testArrayEnd() {
         MaxArray maxArray = new MaxArray();

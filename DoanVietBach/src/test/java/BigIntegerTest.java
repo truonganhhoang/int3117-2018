@@ -57,7 +57,7 @@ public class BigIntegerTest
                 
         assertFalse(bigInt1.equals(bigInt2));
     }
-    
+
     @Test
     public void testAdditionWithoutCarryOn()
     {
@@ -91,11 +91,20 @@ public class BigIntegerTest
     @Test
     public void testSubtractionWithCarryOn()
     {
-        BigInteger bigInt1 = new BigInteger("111111111111111111111");
-        BigInteger bigInt2 = new BigInteger("9");
+        BigInteger bigInt1 = new BigInteger("1000000000000000000000");
+        BigInteger bigInt2 = new BigInteger("1");
         BigInteger difference = bigInt1.subtract(bigInt2);
         
-        assertEquals(new BigInteger("111111111111111111102"), difference);
+        assertEquals(new BigInteger("999999999999999999999"), difference);
+    }
+
+    @Test
+    public void testSubtractionNegative() {
+        BigInteger bigInt1 = new BigInteger("1");
+        BigInteger bigInt2 = new BigInteger("100000000000000000000000000000");
+
+        BigInteger difference = bigInt1.subtract(bigInt2);
+        assertEquals(new BigInteger("-99999999999999999999999999999"), difference);
     }
 
     @Test
@@ -126,5 +135,31 @@ public class BigIntegerTest
         BigInteger sum = bigInt1.add(bigInt2);
 
         assertEquals(new BigInteger("0"), sum);
+    }
+
+    @Test
+    public void testCompareTo() {
+        BigInteger bigInt1 = new BigInteger("11");
+        BigInteger bigInt2 = new BigInteger("-100");
+        BigInteger bigInt3 = new BigInteger("-11");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 1);
+        assertEquals(bigInt3.compareTo(bigInt2), 1);
+    }
+
+    @Test
+    public void testCompareToEquals() {
+        BigInteger bigInt1 = new BigInteger("11");
+        BigInteger bigInt2 = new BigInteger("11");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 0);
+    }
+
+    @Test
+    public void testCompareToZero() {
+        BigInteger bigInt1 = new BigInteger(0);
+        BigInteger bigInt2 = new BigInteger("-0");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 0);
     }
 }
