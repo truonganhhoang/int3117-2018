@@ -14,7 +14,7 @@ class YearMaxPopulation:
 
         for birth, death in people:
             assert birth <= death
-            idx = [i-start_year for i in range(birth, death+1)]
+            idx = [i - start_year for i in range(birth, death + 1)]
             populations[idx] += 1
 
         return np.argmax(populations) + start_year
