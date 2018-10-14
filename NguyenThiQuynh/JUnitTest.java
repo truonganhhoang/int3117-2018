@@ -2,6 +2,7 @@ import junit.framework.Assert;
 import junittest.MaxArray;
 import org.junit.Test;
 import static org.junit.Assert.*;
+
 /**
  * This class test the result of the array
  * @author quynh
