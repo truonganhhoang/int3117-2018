@@ -15,19 +15,70 @@ describe('Kiểm thử - Auto TEST', function () {
                 cy.contains('Trả lời chính xác').then(()=>{
                     cy.get('.fa-chevron-right').click();
                 })
-            })    
-    });
-    it("Test 2", function () {
-        cy.visit('https://hoclieu.sachmem.vn/question_set/5ba9a7efc676f8880d70ad3c/5ba9a939c676f8880d70b2ea/view/1');
-        cy.get(`button[title="Làm lại"]`).click();
+            })
+        // test 2
         cy.contains("Who is my mother")
             .then(()=> {
+            	cy.get(`button[title="Làm lại"]`).click();
                 cy.get(`.content p span`).contains('Who').click({force: true});
                 cy.contains('Chốt').click();
                 cy.contains('Trả lời chính xác').then(()=>{
                     cy.get('.fa-chevron-right').click();
                 })
             })
-        //do tesst
+        // test 3
+        cy.contains("My mom")
+            .then(()=> {
+            	cy.get(`button[title="Làm lại"]`).click();
+                cy.get(`.content p span`).contains('hear').click({force: true});
+                cy.contains('Chốt').click();
+                cy.contains('Trả lời chính xác').then(()=>{
+                    cy.get('.fa-chevron-right').click();
+                })
+            })
+        // test 4
+        cy.contains("more than 200")
+            .then(()=> {
+            	cy.get(`button[title="Làm lại"]`).click();
+                cy.get(`.content p span`).contains('have started').click({force: true});
+                cy.contains('Chốt').click();
+                cy.contains('Trả lời chính xác').then(()=>{
+                    cy.get('.fa-chevron-right').click();
+                })
+            })
+        // test 5
+        cy.contains("can't help")
+            .then(()=> {
+            	cy.get(`button[title="Làm lại"]`).click();
+                cy.get(`.content p span`).contains('smile').click({force: true});
+                cy.contains('Chốt').click();
+                cy.contains('Trả lời chính xác').then(()=>{
+                    cy.get('.fa-chevron-right').click();
+                })
+            })
+        // test 6
+        cy.contains("Young")
+            .then(()=> {
+            	cy.get(`button[title="Làm lại"]`).click();
+                cy.get(`.content p span`).contains('to plan').click({force: true});
+                cy.contains('Chốt').click();
+                cy.contains('Trả lời chính xác').then(()=>{
+                    cy.get('.fa-chevron-right').click();
+                })
+            })
+   		cy.get(`button[title="Kết quả làm bài của bộ câu hỏi"]`).click();
     });
+    // it("Test 2", function () {
+    //     cy.visit('https://hoclieu.sachmem.vn/question_set/5ba9a7efc676f8880d70ad3c/5ba9a939c676f8880d70b2ea/view/1');
+    //     cy.get(`button[title="Làm lại"]`).click();
+    //     cy.contains("Who is my mother")
+    //         .then(()=> {
+    //             cy.get(`.content p span`).contains('Who').click({force: true});
+    //             cy.contains('Chốt').click();
+    //             cy.contains('Trả lời chính xác').then(()=>{
+    //                 cy.get('.fa-chevron-right').click();
+    //             })
+    //         })
+    //     //do tesst
+    // });
 })
