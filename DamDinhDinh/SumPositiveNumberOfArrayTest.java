@@ -39,4 +39,13 @@ public class SumPositiveNumberOfArrayTest {
 
         assertEquals(expect_sum, result);
     }
+
+    @Test
+    public  void testCalculateSumPositiveNumber5() {
+        int array[] = new int[5];
+        int expect_sum = 0;
+        int result = SumPositiveNumberOfArray.calculateSumPositiveNumber(array);
+
+        assertEquals(expect_sum, result);
+    }
 }
