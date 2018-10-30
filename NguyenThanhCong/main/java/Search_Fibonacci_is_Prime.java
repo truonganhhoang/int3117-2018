@@ -1,5 +1,5 @@
 import java.util.Scanner; 
-public class search_fibonanci_is_prime { 
+public class Search_Fibonanci_Is_Prime { 
 
 //Ham kiem tra so nguyen to
   public static boolean checkSNT(int n){ 
@@ -12,7 +12,7 @@ public class search_fibonanci_is_prime {
     else return false;
   }
 
-  public void SearchFibonanci(int[] f, int n){
+  public void searchFibonanci(int[] f, int n){
     f[0] = 1; 
     f[1] = 1;
     int i = 1; count = 1;
@@ -31,10 +31,8 @@ public class search_fibonanci_is_prime {
     System.out.println("Nhap n: ");
     n = c.nextInt();
     int[] f = new int[20];
-    for (int m = 0; m <20 ; m++){
-      f[m] = m;
-    }
+    f[2] = 2; 
     System.out.print("Cac so Fibonanci nho hon "+ n +" la so nguyen to: \n "); 
-      CheckFibonanci(f,n);
+      searchFibonanci(f,n);
    }
 }
