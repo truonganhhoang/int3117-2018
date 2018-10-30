@@ -9,4 +9,4 @@
   * NguyenDucNhien: [xem issue #73](https://github.com/truonganhhoang/int3117-2018/issues/73)
 * Tuần 4:
   * Kiểm tra mức độ bao phủ (coverage) của bài jUnit tuần 1, 2: Kết quả 100% - [xem ảnh tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Images/coverage.png)
-  * Demo Cypress
+  * Demo Cypress [xem tại đây](https://github.com/hieutm2198/int3117-2018/blob/master/TranMinhHieu/cypress/integration/fb-login/actions.spec.js)
