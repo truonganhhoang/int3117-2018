@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Person;
+package person.prime;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -29,30 +29,30 @@ public class PersonTest {
     @Test
     public void testGetName() {
         Person p = new Person("Manh", 21);
-        assertEquals(p.GetName(), "Manh");
+        assertEquals(p.getName(), "Manh");
     }
 
     @Test
     public void testGetAge() {
         Person p = new Person("Manh", 21);
-        assertEquals(p.GetAge(), 21);        
+        assertEquals(p.getAge(), 21);        
     }
     
     @Test
-    public void testKiemTraNguyenTo() {
+    public void testCheckPrime() {
         Person p = new Person("Manh", 21);
         boolean check = true;
-        if (p.GetAge() < 2) {
+        if (p.getAge() < 2) {
             check = false;
         } else {
-            for (int i = 2; i < Math.sqrt(p.GetAge()); i++) {
-                if (p.GetAge() % i == 0) {
+            for (int i = 2; i < Math.sqrt(p.getAge()); i++) {
+                if (p.getAge() % i == 0) {
                     check = false;
                     break;
                 }
             }
         }
-        assertEquals("Tuổi của bạn không phải là một số nguyên tố", check, p.KiemTraNguyenTo());
+        assertEquals("Tuổi của bạn không phải là một số nguyên tố", check, p.checkPrime());
     }
     
 }
