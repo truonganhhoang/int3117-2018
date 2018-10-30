@@ -4,7 +4,7 @@ public class BigInteger
 
     public BigInteger(long init) {
         while (init > 0) {
-            value += (char)(init % 10 + 48);
+            value += (char)(init % 10 + '0');
             init /= 10L;
         }
     }
@@ -49,7 +49,7 @@ public class BigInteger
     public long toLong() {
         int res = 0;
         for (int i = value.length() - 1; i >= 0; i--) {
-            res = res * 10 + (int)value.charAt(i) - 48;
+            res = res * 10 + (int)value.charAt(i) - '0';
         }
         return res;
     }
@@ -65,8 +65,8 @@ public class BigInteger
         }
         int rem = 0;
         for (int i = 0; i < maxLength; i++) {
-            int x1 = value.charAt(i) - 48;
-            int x2 = other.value.charAt(i) - 48;
+            int x1 = value.charAt(i) - '0';
+            int x2 = other.value.charAt(i) - '0';
             int add = x1 + x2 + rem;
             if (add > 9) {
                 rem = 1;
@@ -74,7 +74,7 @@ public class BigInteger
             } else {
                 rem = 0;
             }
-            res.value += (char)(add + 48);
+            res.value += (char)(add + '0');
         }
         if (rem == 1) {
             res.value += '1';
@@ -99,8 +99,8 @@ public class BigInteger
         }
         int rem = 0;
         for (int i = 0; i < maxLength; i++) {
-            int x1 = value.charAt(i) - 48;
-            int x2 = other.value.charAt(i) - 48;
+            int x1 = value.charAt(i) - '0';
+            int x2 = other.value.charAt(i) - '0';
             int sub = x1 - x2 - rem;
             if (sub < 0) {
                 rem = 1;
@@ -108,7 +108,7 @@ public class BigInteger
             } else {
                 rem = 0;
             }
-            res.value += (char)(sub + 48);
+            res.value += (char)(sub + '0');
         }
         int pos = 0;
         for (int i = res.value.length() - 1; i >= 1; i--) {
