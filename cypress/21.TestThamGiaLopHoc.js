@@ -3,9 +3,8 @@ describe('Test tham gia lop hoc', () => {
       cy.visit('https://hoclieu.sachmem.vn/folder/0');
     });
   
-    it('test tham gia lop hoc', () => {
+    it('test click to tham gia lop hoc', () => {
         cy.get('.alert > :nth-child(2)').click()
-
     });
   
     it('test input ma tham gia lop', () => {
