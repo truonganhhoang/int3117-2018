@@ -2,7 +2,7 @@ describe('test change language', function(){
     it('visit hoc lieu', function(){
         cy.visit('https://hoclieu.sachmem.vn/folder/0')
     })
-    it('click languege button',function(){
+    it('click language dropdown',function(){
         cy.get('#languageDropdown').click()
     })
     it('change language to english',function(){
