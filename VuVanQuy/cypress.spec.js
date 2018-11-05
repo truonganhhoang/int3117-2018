@@ -1,9 +1,9 @@
-describe('hoclieu.sachmem.vn', function() {
+describe('Đăng nhập với gmail hoclieu.sachmem.vn  khi chưa đăng nhập tài khoản google', function() {
 	it('Đi đến trang', function() {
 		cy.visit('https://accounts.sachmem.vn/users/sign_in')
 	})
 	
-	it("Kiểm tra đăng nhập 'Đăng nhập'",function() {
+	it("Vào phần 'Đăng nhập'",function() {
 		cy.contains('Đăng nhập')
 		   .should('be.visible')
 	})
@@ -20,7 +20,28 @@ describe('hoclieu.sachmem.vn', function() {
 	it('nhớ tài khoản', function() {
 		cy.get('#user_remember_me').check('1')
 	})
-	it('"Đăng nhập"', function() {
-		cy.get('[type="submit"]').click()
+	it('"Google"', function() {
+		cy.contains('Google').should('be.visitble')
+	})
+	it('Nhập tài khoản gmail', function() {
+		cy.get('[type="email"]')
+		  .type('main_user')
+		  .should('has.value', 'mail_user')
+	})
+	
+	it("Ấn 'Next'",function() {
+		cy.contains('Next')
+		   .should('be.visible')
+	})
+	
+	it('Nhập mật khẩu gmail', function() {
+		cy.get('[type="password"]')
+		  .type('main_password')
+		  .should('has.value', 'mail_password')
+	})
+	
+	it("Ấn 'Next'",function() {
+		cy.contains('Next')
+		   .should('be.visible')
 	})
 });
