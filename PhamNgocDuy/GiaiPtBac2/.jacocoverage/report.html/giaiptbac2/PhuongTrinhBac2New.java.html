@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en_us"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PhuongTrinhBac2New.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;GiaiPtBac2&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">giaiptbac2</a> &gt; <span class="el_source">PhuongTrinhBac2New.java</span></div><h1>PhuongTrinhBac2New.java</h1><pre class="source lang-java linenums">package giaiptbac2;
+
+import static java.lang.Math.sqrt;
+
+<span class="nc" id="L5">public class PhuongTrinhBac2New{</span>
+
+	public static void main(String []args){
+<span class="nc" id="L8">		System.out.println(solve(1.0f,3.0f,2.0f));</span>
+<span class="nc" id="L9">	}</span>
+	public static String solve(float a, float b, float c) {
+<span class="fc" id="L11">		int soNghiem = 0;</span>
+<span class="fc" id="L12">		float[] nghiem = new float[2];</span>
+
+<span class="fc bfc" id="L14" title="All 2 branches covered.">		if (a == 0) {</span>
+
+<span class="fc bfc" id="L16" title="All 2 branches covered.">			if (b != 0) {</span>
+<span class="fc" id="L17">				nghiem[0] = -c / b;</span>
+<span class="fc" id="L18">				soNghiem = 1;</span>
+			}
+		} else {
+<span class="fc" id="L21">			float denta = b * b - 4 * a * c;</span>
+
+<span class="fc bfc" id="L23" title="All 2 branches covered.">			if (denta &gt; 0) {</span>
+<span class="fc" id="L24">				nghiem[0] = (float) ((-b + sqrt(denta)) / (2 * a));</span>
+<span class="fc" id="L25">				nghiem[1] = (float) ((-b - sqrt(denta)) / (2 * a));</span>
+<span class="fc" id="L26">				soNghiem = 2;</span>
+
+<span class="fc bfc" id="L28" title="All 2 branches covered.">			} else if (denta == 0) {</span>
+<span class="fc" id="L29">				nghiem[0] = -b / (2 * a);</span>
+<span class="fc" id="L30">				soNghiem = 1;</span>
+			}
+		}
+<span class="fc" id="L33">		String nghiemToString = &quot;[&quot;;</span>
+
+<span class="fc bfc" id="L35" title="All 2 branches covered.">		if (soNghiem &gt; 0) {</span>
+
+<span class="fc bfc" id="L37" title="All 2 branches covered.">			for (int i = 0; i &lt; soNghiem; i++) {</span>
+<span class="fc" id="L38">				nghiemToString += nghiem[i];</span>
+				
+<span class="fc bfc" id="L40" title="All 2 branches covered.">				if (i + 1 &lt; soNghiem) {</span>
+<span class="fc" id="L41">					nghiemToString += &quot; ; &quot;;</span>
+				}
+			}
+		}
+<span class="fc" id="L45">		nghiemToString += &quot;]&quot;;</span>
+<span class="fc" id="L46">		return &quot;PhuongTrinhBac2{&quot; + &quot;a=&quot; + a + &quot;, b=&quot; + b + &quot;, c=&quot; + c + &quot;, nghiem=&quot; + nghiemToString + '}';</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
