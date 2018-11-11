@@ -1,3 +1,5 @@
+package giaiptbac2;
+
 import static java.lang.Math.sqrt;
 
 public class PhuongTrinhBac2New{
