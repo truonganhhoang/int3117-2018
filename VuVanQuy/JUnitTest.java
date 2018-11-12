@@ -6,32 +6,37 @@ import org.junit.Test;
 public class JUnitTest {
 
     @Test
-    public void testSortTrue() {
+    public void kiemTraTamGiacKhongTonTai() {
         JUnit test = new JUnit();
-        int array[] = {7, 3, 2, 2, 6};
-        int arrayResult[] = {2, 2, 3, 6, 7};
-
-        Assert.assertArrayEquals(arrayResult, test.sort(array));
+        Assert.assertEquals("Kich thuoc da cho khong phai la 3 canh tam giac", test.kiemTraTamGiac(1, 2,3));
     }
 
     @Test
-    public void testSortNull() {
+    public void kiemTraTamGiacdeu() {
         JUnit test = new JUnit();
-        int array[] = {};
-        int arrayResult[] = {};
-
-        Assert.assertArrayEquals(arrayResult, test.sort(array));
+       
+       Assert.assertEquals("Tam giac deu", test.kiemTraTamGiac(5,5,5));
     }
 
 
     @Test
-    public void testSortReverse() {
+    public void kiemTraTamGiacCan() {
         JUnit test = new JUnit();
-        int array[] = {7, 6, 5, 5, 4};
-        int arrayResult[] = {4, 5, 5, 6, 7};
-
-        Assert.assertArrayEquals(arrayResult, test.sort(array));
+        Assert.assertEquals("Tam giac can", test.kiemTraTamGiac(5,5,6));
     }
+    
+    @Test
+    public void kiemTraTamGiacVuong() {
+        JUnit test = new JUnit();
+        Assert.assertEquals("Tam giac vuong", test.kiemTraTamGiac(3,4,5));
+    }
+    
+    @Test
+    public void kiemTraTamGiacThuong() {
+        JUnit test = new JUnit();
+        Assert.assertEquals("Tam giac thuong", test.kiemTraTamGiac(4,5,6));
+    }
+    
 }
 
 
