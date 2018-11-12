@@ -38,14 +38,37 @@ public class TestEmployee extends TestCase{
     }
     
     @Test
-    public void testIdIsPrimeIdSmallerOrEqualToOne(){
+    public void testIdIsPrimeFalse(){
+        assertFalse(emp.idIsPrime(12) == true);
+    }
+    
+    //Tuần 11 - 5 đường đi
+    @Test
+    public void testPath1(){
         assertTrue(emp.idIsPrime(0) == false);
     }
     
     @Test
-    public void testIdIsPrimeFalse(){
-        assertFalse(emp.idIsPrime(12) == true);
+    public void testPath2(){
+        assertTrue(emp.idIsPrime(2) == true);
     }
+    
+    @Test
+    public void testPath3(){
+        assertTrue(emp.idIsPrime(4) == false);
+    }
+    
+    @Test
+    public void testPath4(){
+        assertTrue(emp.idIsPrime(7) == true);
+    }
+    
+    @Test
+    public void testPath5(){
+        assertTrue(emp.idIsPrime(9) == false);
+    }
+    
+    
     
     @Test
     public void testIdIsPrimeTrue(){
