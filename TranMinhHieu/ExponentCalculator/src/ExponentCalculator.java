@@ -1,4 +1,3 @@
-
 public class ExponentCalculator {
 	public static double calculate(double base, double exp) {
 		double result = 0.0;
