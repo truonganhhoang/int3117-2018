@@ -1,5 +1,3 @@
-package com.company;
-
 public class BigInteger
 {
     private String arr;

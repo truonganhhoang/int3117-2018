@@ -1,8 +1,7 @@
-package com.company
+import org.junit.*;
+import static org.junit.Assert.*;
 
-import org.junit.Test
-
-class BigIntegerTest extends groovy.util.GroovyTestCase {
+public class BigIntegerTest {
     @Test
     public void testCreateBigIntegerFromInt()
     {
@@ -147,5 +146,70 @@ class BigIntegerTest extends groovy.util.GroovyTestCase {
         assertEquals(diff1, new BigInteger(1L));
         assertEquals(diff2, new BigInteger("-0000000000000000000000000000000000000001"));
 
+    }
+
+    /* Week 11 Homework Control Flow */
+    @Test
+    public void testCompareToPath1(){
+        BigInteger bigInt1 = new BigInteger("-1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("-2299999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 1);
+    }
+
+    @Test
+    public void testCompareToPath2(){
+        BigInteger bigInt1 = new BigInteger("-1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("1299999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), -1);
+    }
+
+    @Test
+    public void testCompareToPath3(){
+        BigInteger bigInt1 = new BigInteger("1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("-1299999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 1);
+    }
+
+    @Test
+    public void testCompareToPath4(){
+        BigInteger bigInt1 = new BigInteger("1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("12099999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), -1);
+    }
+
+    @Test
+    public void testCompareToPath5(){
+        BigInteger bigInt1 = new BigInteger("1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("199999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 1);
+    }
+
+    @Test
+    public void testCompareToPath6(){
+        BigInteger bigInt1 = new BigInteger("1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("1399999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), -1);
+    }
+
+    @Test
+    public void testCompareToPath7(){
+        BigInteger bigInt1 = new BigInteger("1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("1199999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 1);
+    }
+
+    @Test
+    public void testCompareToPath8(){
+        BigInteger bigInt1 = new BigInteger("1299999999999999999999");
+        BigInteger bigInt2 = new BigInteger("1299999999999999999999");
+
+        assertEquals(bigInt1.compareTo(bigInt2), 0);
     }
 }
