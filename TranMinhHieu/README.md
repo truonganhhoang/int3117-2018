@@ -10,3 +10,4 @@
 * Tuần 4:
   * Kiểm tra mức độ bao phủ (coverage) của bài jUnit tuần 1, 2: Kết quả 100% - [xem ảnh tại đây](https://github.com/hieutm2198/int3117-2018/tree/master/TranMinhHieu/Images/coverage.png)
   * Demo Cypress [xem tại đây](https://github.com/hieutm2198/int3117-2018/blob/master/TranMinhHieu/cypress/integration/fb-login/actions.spec.js)
+* Tuần 11: [Xem bài làm trên Google Docs](https://docs.google.com/document/d/1UpEcNgEg1zdSsssCBUJMM8YEdCG39fVwjjVtxGhz-fQ/edit?usp=sharing)
