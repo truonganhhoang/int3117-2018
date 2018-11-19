@@ -23,20 +23,20 @@ public class BigInteger
         return theNumber.substring(i).compareTo("0") == 0? "0" : sign + theNumber.substring(i) ;
     }
 
-    private int positiveCompareTo(BigInteger other) {
+    public int positiveCompareTo(BigInteger other) {
         String a = this.toString();
         String b = other.toString();
         if(a.compareTo(b) == 0) return 0;
         else if(a.length() > b.length()) {
             return 1;
         }
-        else if(a.length() < other.theNumber.length()) {
+        else if(a.length() < b.length()) {
             return -1;
         }
         else {
-            for(int i = 0; i < theNumber.length(); ++i) {
-                if(theNumber.charAt(i) > other.theNumber.charAt(i)) return 1;
-                if(theNumber.charAt(i) < other.theNumber.charAt(i)) return -1;
+            for(int i = 0; i < a.length(); ++i) {
+                if(a.charAt(i) > b.charAt(i)) return 1;
+                if(a.charAt(i) < b.charAt(i)) return -1;
             }
         }
         return 0;
