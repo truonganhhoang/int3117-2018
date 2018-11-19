@@ -23,7 +23,7 @@ public class BigInteger
         return theNumber.substring(i).compareTo("0") == 0? "0" : sign + theNumber.substring(i) ;
     }
 
-    private int positiveCompareTo(BigInteger other) {
+    public int positiveCompareTo(BigInteger other) {
         String a = this.toString();
         String b = other.toString();
         if(a.compareTo(b) == 0) return 0;

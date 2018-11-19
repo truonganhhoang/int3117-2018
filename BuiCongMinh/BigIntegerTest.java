@@ -137,6 +137,47 @@ public class BigIntegerTest extends TestCase
         assertEquals(bigInt1.compareTo(new BigInteger(-1)),1);
     }
 
+    public void testPositiveCompareTo1(){
+        BigInteger bigInt1 = new BigInteger("2299999999999999999999");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("2299999999999999999999")), 0);
+    }
+
+    public void testPositiveCompareTo2(){
+        BigInteger bigInt1 = new BigInteger("199999999999999999999");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("99999999999999999999")), 1);
+    }
+
+    public void testPositiveCompareTo3(){
+        BigInteger bigInt1 = new BigInteger("99999999999999999999");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("199999999999999999999")), -1);
+    }
+
+    public void testPositiveCompareTo4(){
+        BigInteger bigInt1 = new BigInteger("56789101112");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("47895101112")), 1);
+    }
+
+    public void testPositiveCompareTo5(){
+        BigInteger bigInt1 = new BigInteger("47895101112");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("56789101112")), -1);
+    }
+
+    public void testPositiveCompareTo6(){
+        BigInteger bigInt1 = new BigInteger("59999999999999999999");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("29999999999999999999")), 1);
+    }
+
+    public void testPositiveCompareTo7(){
+        BigInteger bigInt1 = new BigInteger("99999799999999999999");
+
+        assertEquals(bigInt1.compareTo(new BigInteger("99999899999999999999")), -1);
+    }
     
     public void testLeadingZero() {
         BigInteger bigInt1 = new BigInteger("-0000000000000000000001000");
