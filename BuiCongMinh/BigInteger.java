@@ -30,13 +30,13 @@ public class BigInteger
         else if(a.length() > b.length()) {
             return 1;
         }
-        else if(a.length() < other.theNumber.length()) {
+        else if(a.length() < b.length()) {
             return -1;
         }
         else {
-            for(int i = 0; i < theNumber.length(); ++i) {
-                if(theNumber.charAt(i) > other.theNumber.charAt(i)) return 1;
-                if(theNumber.charAt(i) < other.theNumber.charAt(i)) return -1;
+            for(int i = 0; i < a.length(); ++i) {
+                if(a.charAt(i) > b.charAt(i)) return 1;
+                if(a.charAt(i) < b.charAt(i)) return -1;
             }
         }
         return 0;
