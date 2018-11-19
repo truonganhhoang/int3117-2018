@@ -111,10 +111,14 @@ public class BigInteger {
         }
 
         char arrayResultx[] = new char[max];
-        if (k == 1) for (int i = 0; i < Num1; i++) arrayResultx[i] = (char) (arrayResult[i] + 48); // covert according to ASCII
-        if (k == 2) for (int i = 0; i < Num2; i++) arrayResultx[i] = (char) (arrayResult[i] + 48); // covert according to ASCII
-        if (k == 1) numstr = String.copyValueOf(arrayResultx, 0, Num1); // convert from array to String
-        if (k == 2) numstr = String.copyValueOf(arrayResultx, 0, Num2); // convert from array to String
+        if (k == 1) {
+        	for (int i = 0; i < Num1; i++) arrayResultx[i] = (char) (arrayResult[i] + 48); // covert according to ASCII
+        	numstr = String.copyValueOf(arrayResultx, 0, Num1); // convert from array to String
+        } else {
+        	for (int i = 0; i < Num2; i++) arrayResultx[i] = (char) (arrayResult[i] + 48); // covert according to ASCII
+        	numstr = String.copyValueOf(arrayResultx, 0, Num2); // convert from array to String
+        }
+  
         return new BigInteger(numstr);
 
     }
